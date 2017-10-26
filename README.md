@@ -1,0 +1,1 @@
+This is a minimal repro case for a Vue + Typescript declaration issue, modified based on the setup of https://github.com/Microsoft/TypeScript-Vue-Starter.
