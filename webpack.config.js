@@ -27,11 +27,16 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
         exclude: /node_modules/,
-        options: {
-          appendTsSuffixTo: [/\.vue$/],
-        }
+        use: [
+          {
+              loader: "babel-loader",
+              options: { presets: ['es2015'], plugins: ['transform-vue-jsx'] }
+          },
+          {
+              loader: "ts-loader"
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,

@@ -1,11 +1,14 @@
 {
     "compilerOptions": {
         "outDir": "./built/",
+        "noImplicitAny": false,
         "sourceMap": true,
         "strict": true,
         "module": "es2015",
         "moduleResolution": "node",
-        "target": "es5"
+        "target": "es5",
+        "jsx": "preserve",
+        "jsxFactory": "h"
     },
     "include": [
         "./src/**/*"

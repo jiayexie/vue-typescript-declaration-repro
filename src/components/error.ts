@@ -1,4 +1,4 @@
-import Vue from "vue";
+import Vue, {VNode} from "vue";
 
 const component = Vue.extend({
     data() {
@@ -18,9 +18,9 @@ const component = Vue.extend({
         sayHello() {
             this.errorMsg
         }
-    // },
-    // render(createElement) {
-    //     return createElement('div', this.message);
+    },
+    render(createElement): VNode {
+        return createElement('div', this.message);
     }
 });
 
